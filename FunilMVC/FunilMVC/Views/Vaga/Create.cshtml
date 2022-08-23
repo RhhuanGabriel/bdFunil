@@ -1,0 +1,59 @@
+﻿@model FunilMVC.Models.VAGA
+
+@{
+    ViewBag.Title = "Vaga";
+}
+
+<h2>Criar</h2>
+
+<div>
+    <form action="/Vaga/Create" method="post">
+
+        <div class="form-group">
+            <label for="nome">Nome da vaga</label>
+            <input type="text" class="form-control"
+                   maxlength="500" id="nome" name="nome"
+                   required />
+        </div>
+
+        <div class="form-group">
+            <label for="descricao">Descrição</label>
+            <input type="text" class="form-control"
+                   maxlength="1000" id="descricao" name="descricao"
+                   required />
+        </div>
+
+        <div class="form-group">
+            <label for="atribuicao">Atribuição</label>
+            <input type="text" class="form-control"
+                   maxlength="1000" id="atribuicao" name="atribuicao"
+                   required />
+        </div>
+
+        <div class="form-group">
+            <label for="salario">Salário</label>
+            <input class="form-control"
+                   id="salario" name="salario"
+                   required />
+        </div>
+
+        <div class="form-group">
+            <label for="requisito">Requisito</label>
+            <input type="text" class="form-control"
+                   maxlength="1000" id="requisito" name="requisito"
+                   required />
+        </div>
+
+        <div class="form-group">
+            <label for="data">Data de cadastro</label>
+            <input type="date" class="form-control"
+                   id="data" name="data"/>
+        </div>
+
+
+        <div>
+            <a class="btn btn-primary" href="/Vaga/Index">Voltar</a>
+            <button type="submit" class="btn btn-success">Criar</button>
+        </div>
+    </form>
+</div>

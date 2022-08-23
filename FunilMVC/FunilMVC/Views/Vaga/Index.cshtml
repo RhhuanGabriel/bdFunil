@@ -1,0 +1,65 @@
+﻿@model IEnumerable<FunilMVC.Models.VAGA>
+
+@{
+    ViewBag.Title = "Vaga";
+}
+
+<h2>Início</h2>
+
+<div>
+    <p>
+        <a class="btn btn-success" href="/Vaga/Create">Criar</a>
+    </p>
+</div>
+
+<table class="table">
+    <tr>
+        <th scope="col">
+            ID
+        </th>
+
+        <th scope="col">
+            Nome
+        </th>
+
+        <th scope="col">
+            Salário
+        </th>
+
+        <th scope="col">
+            Data do cadastro
+        </th>
+
+        <th scope="col">
+            Opções
+        </th>
+    </tr>
+
+@foreach(var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.VAIID)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.VAINOME)
+                    </td>
+
+                    <td>
+                        R$@Html.DisplayFor(modelItem => item.VAISALARIO)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.VAIDATACADASTRO)
+                    </td>
+
+                    <td>
+                        <a class="btn btn-warning" href="@Url.Action("Edit", new {id=item.VAIID})">Editar</a> |
+                        <a class="btn btn-info" href="@Url.Action("Details", new {id=item.VAIID})">Detalhes</a> |
+                        <a class="btn btn-danger" href="@Url.Action("Delete", new {id=item.VAIID})">Deletar</a>
+                    </td>
+                </tr>
+            }
+
+</table>

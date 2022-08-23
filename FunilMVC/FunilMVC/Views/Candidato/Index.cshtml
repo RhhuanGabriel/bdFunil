@@ -1,0 +1,58 @@
+﻿@model IEnumerable<FunilMVC.Models.CANDIDATO>
+
+@{
+    ViewBag.Title = "candidato";
+}
+
+<h2>Início</h2>
+
+<div>
+    <p>
+        <a class="btn btn-success" href="/Candidato/Create">Criar</a>
+    </p>
+</div>
+
+<table class="table">
+    <tr>
+        <th scope="col">
+            ID
+        </th>
+
+        <th scope="col">
+            Nome
+        </th>
+
+        <th scope="col">
+            Formação
+        </th>
+
+        <th scope="col">
+            Opções
+        </th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CANID)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.CANNOME)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.CANFORMACAO)
+            </td>
+
+            <td>
+                <a class="btn btn-warning" href="@Url.Action("Edit", new {id=item.CANID})">Editar</a> |
+                <a class="btn btn-info" href="@Url.Action("Details", new {id=item.CANID})">Detalhes</a> |
+                <a class="btn btn-danger" href="@Url.Action("Delete", new {id=item.CANID})">Deletar</a>
+            </td>
+        </tr>
+    }
+
+</table>

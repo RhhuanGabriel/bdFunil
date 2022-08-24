@@ -1,0 +1,22 @@
+﻿@model IEnumerable<FunilMVC.Models.GrupoCandidatoVaga>
+
+@{
+    ViewBag.Title = "Dashboard";
+    var contar = Model.Count();
+}
+
+<h2>Quantidade</h2>
+
+<div class="row divCursoItemDashboard">
+    @foreach (var item in Model)
+    {
+        <div class="col-lg-2">
+            @item.Vaga:    <br />
+            @contar
+            <div>
+                <a class="btn btn-info" href="DisciplinaPorCurso?id=@item.Codigo">Ver &raquo;</a>
+            </div>
+        </div>
+    }
+
+</div>

@@ -31,5 +31,10 @@ namespace FunilMVC.Controllers
         {
             return View();
         }
+
+        public ActionResult ErroNull()
+        {
+            return View();
+        }
     }
 }

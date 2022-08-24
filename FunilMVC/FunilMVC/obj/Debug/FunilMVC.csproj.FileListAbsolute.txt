@@ -1,3 +1,5 @@
+C:\Users\android\source\repos\FunilMVC\FunilMVC\obj\Debug\FunilMVC.csproj.AssemblyReference.cache
+C:\Users\android\source\repos\FunilMVC\FunilMVC\obj\Debug\FunilMVC.csproj.CoreCompileInputs.cache
 C:\Users\android\source\repos\FunilMVC\FunilMVC\bin\FunilMVC.dll.config
 C:\Users\android\source\repos\FunilMVC\FunilMVC\bin\FunilMVC.dll
 C:\Users\android\source\repos\FunilMVC\FunilMVC\bin\FunilMVC.pdb
@@ -81,8 +83,6 @@ C:\Users\android\source\repos\FunilMVC\FunilMVC\bin\pt-br\System.Web.Razor.resou
 C:\Users\android\source\repos\FunilMVC\FunilMVC\bin\pt-br\System.Web.WebPages.resources.dll
 C:\Users\android\source\repos\FunilMVC\FunilMVC\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
 C:\Users\android\source\repos\FunilMVC\FunilMVC\bin\pt-br\System.Web.WebPages.Razor.resources.dll
-C:\Users\android\source\repos\FunilMVC\FunilMVC\obj\Debug\FunilMVC.csproj.AssemblyReference.cache
-C:\Users\android\source\repos\FunilMVC\FunilMVC\obj\Debug\FunilMVC.csproj.CoreCompileInputs.cache
 C:\Users\android\source\repos\FunilMVC\FunilMVC\obj\Debug\FunilMVC.csproj.CopyComplete
 C:\Users\android\source\repos\FunilMVC\FunilMVC\obj\Debug\FunilMVC.dll
 C:\Users\android\source\repos\FunilMVC\FunilMVC\obj\Debug\FunilMVC.pdb

@@ -127,6 +127,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CandidatoController.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
+    <Compile Include="Controllers\EtapaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\VagaController.cs" />
     <Compile Include="Global.asax.cs">
@@ -154,6 +156,9 @@
       <DependentUpon>bdFunilModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ETAPA.cs">
+      <DependentUpon>bdFunilModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GrupoCandidatoVaga.cs">
       <DependentUpon>bdFunilModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\VAGA.cs">
@@ -225,6 +230,14 @@
     <Content Include="Views\Candidato\Create.cshtml" />
     <Content Include="Views\Candidato\Delete.cshtml" />
     <Content Include="Views\Candidato\Edit.cshtml" />
+    <Content Include="Views\Etapa\Index.cshtml" />
+    <Content Include="Views\Etapa\Details.cshtml" />
+    <Content Include="Views\Etapa\Delete.cshtml" />
+    <Content Include="Views\Etapa\Edit.cshtml" />
+    <Content Include="Views\Etapa\Create.cshtml" />
+    <Content Include="Views\Vaga\VagaCandidato.cshtml" />
+    <Content Include="Views\Home\ErroNull.cshtml" />
+    <Content Include="Views\Dashboard\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

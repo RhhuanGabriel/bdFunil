@@ -1,0 +1,58 @@
+﻿@model IEnumerable<FunilMVC.Models.ETAPA>
+
+@{
+    ViewBag.Title = "Etapa";
+}
+
+<h2>Início</h2>
+
+<div>
+    <p>
+        <a class="btn btn-success" href="/Etapa/Create">Criar</a>
+    </p>
+</div>
+
+<table class="table">
+    <tr>
+        <th scope="col">
+            ID
+        </th>
+
+        <th scope="col">
+            Descrição
+        </th>
+
+        <th scope="col">
+            SEQ
+        </th>
+
+        <th scope="col">
+            Opções
+        </th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ETAID)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.ETADESCRICACAO)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.ETASEQ)
+            </td>
+
+            <td>
+                <a class="btn btn-warning" href="@Url.Action("Edit", new {id=item.ETAID})">Editar</a> |
+                <a class="btn btn-info" href="@Url.Action("Details", new {id=item.ETAID})">Detalhes</a> |
+                <a class="btn btn-danger" href="@Url.Action("Delete", new {id=item.ETAID})">Deletar</a>
+            </td>
+        </tr>
+    }
+
+</table>

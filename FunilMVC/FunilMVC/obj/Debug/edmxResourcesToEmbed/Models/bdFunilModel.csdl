@@ -79,5 +79,21 @@
       <End Role="VAGA" EntitySet="VAGA" />
       <End Role="CANDIDATOVAGA" EntitySet="CANDIDATOVAGA" />
     </AssociationSet>
+    <EntitySet Name="GrupoCandidatoVaga" EntityType="BDFunilModel.GrupoCandidatoVaga" />
   </EntityContainer>
+  <EntityType Name="GrupoCandidatoVaga">
+    <Key>
+      <PropertyRef Name="Codigo" />
+      <PropertyRef Name="Nome" />
+      <PropertyRef Name="DataDeCadastro" />
+      <PropertyRef Name="Situacao" />
+      <PropertyRef Name="CodigoV" />
+    </Key>
+    <Property Name="Codigo" Type="Int32" Nullable="false" />
+    <Property Name="Nome" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Vaga" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="DataDeCadastro" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Situacao" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CodigoV" Type="Int32" Nullable="false" />
+  </EntityType>
 </Schema>

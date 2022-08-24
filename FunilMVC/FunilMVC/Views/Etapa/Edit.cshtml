@@ -1,0 +1,31 @@
+﻿@model FunilMVC.Models.ETAPA
+
+@{
+    ViewBag.Title = "Etapa";
+}
+
+<h2>Editar</h2>
+
+<div>
+    <form action="/Etapa/Edit?id=@Model.ETAID" method="post">
+
+        <div class="form-group">
+            <label for="descricao">Descrição</label>
+            <input type="text" class="form-control"
+                   maxlength="100" id="descricao" name="descricao" value="@Model.ETADESCRICACAO"
+                   required />
+        </div>
+
+        <div class="form-group">
+            <label for="seq">SEQ</label>
+            <input type="number" class="form-control"
+                   id="seq" name="seq" value="@Model.ETASEQ"
+                   required />
+        </div>
+
+        <div>
+            <a class="btn btn-primary" href="/Etapa/Index">Voltar</a>
+            <button type="submit" class="btn btn-success">Salvar</button>
+        </div>
+    </form>
+</div>

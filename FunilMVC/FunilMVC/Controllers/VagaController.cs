@@ -19,6 +19,21 @@ namespace FunilMVC.Controllers
         }
 
         [HttpGet]
+        public ActionResult VagaCandidato(int? id)
+        {
+            CANDIDATOVAGA candi = new CANDIDATOVAGA();
+
+            try
+            {
+                return View(bd.GrupoCandidatoVaga.ToList().Where(x => x.CodigoV == id));
+            }
+            catch
+            {
+                return RedirectToAction("ErroNull", "Home");
+            }
+        }
+
+        [HttpGet]
         public ActionResult Details(int? id)
         {
             if (id == null)

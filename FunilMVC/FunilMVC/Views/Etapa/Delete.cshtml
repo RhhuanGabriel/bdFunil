@@ -1,0 +1,37 @@
+﻿@model FunilMVC.Models.ETAPA
+
+@{
+    ViewBag.Title = "Etapa";
+}
+
+<h2>Deletar</h2>
+
+<h3>Você realmente deseja deletar?</h3>
+
+<form action="/Etapa/ConfirmDelete?id=@Model.ETAID" method="post">
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                Descrição
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ETADESCRICACAO)
+            </dd>
+            <hr />
+            <dt>
+                SEQ
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ETASEQ)
+            </dd>
+        </dl>
+    </div>
+
+    <div class="form-group">
+        <a class="btn btn-primary" href="/Etapa/Index">Voltar</a>
+        <button class="btn btn-danger" type="submit">Deletar</button>
+    </div>
+</form>

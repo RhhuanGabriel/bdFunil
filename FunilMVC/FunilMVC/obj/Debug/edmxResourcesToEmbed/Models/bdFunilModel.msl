@@ -42,5 +42,17 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="GrupoCandidatoVaga">
+      <EntityTypeMapping TypeName="BDFunilModel.GrupoCandidatoVaga">
+        <MappingFragment StoreEntitySet="GrupoCandidatoVaga">
+          <ScalarProperty Name="CodigoV" ColumnName="CodigoV" />
+          <ScalarProperty Name="Situacao" ColumnName="Situacao" />
+          <ScalarProperty Name="DataDeCadastro" ColumnName="DataDeCadastro" />
+          <ScalarProperty Name="Vaga" ColumnName="Vaga" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

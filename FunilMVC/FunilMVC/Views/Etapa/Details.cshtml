@@ -1,0 +1,34 @@
+﻿@model FunilMVC.Models.ETAPA
+
+@{
+    ViewBag.Title = "Etapa";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Descrição
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ETADESCRICACAO)
+        </dd>
+        <hr />
+        <dt>
+            SEQ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ETASEQ)
+        </dd>
+        <hr />
+    </dl>
+</div>
+<p>
+    <a class="btn btn-primary" href="/Etapa/Index">Voltar</a>
+    <a class="btn btn-warning" href="@Url.Action("Edit", new {id=Model.ETAID})">Editar</a>
+    <a class="btn btn-danger" href="@Url.Action("Delete", new {id=Model.ETAID})">Deletar</a>
+</p>

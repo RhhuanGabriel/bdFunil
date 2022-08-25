@@ -1,4 +1,4 @@
-﻿@model IEnumerable<FunilMVC.Models.GrupoCandidatoVaga>
+﻿@model IEnumerable<FunilMVC.Models.QuantidadeVaiid>
 
 @{
     ViewBag.Title = "Dashboard";
@@ -7,16 +7,36 @@
 
 <h2>Quantidade</h2>
 
-<div class="row divCursoItemDashboard">
+<table class="table">
+    <tr>
+        <th scope="col">
+            ID
+        </th>
+
+        <th scope="col">
+            Vaga
+        </th>
+
+        <th scope="col">
+            Candidatos cadastrados
+        </th>
+    </tr>
+
     @foreach (var item in Model)
     {
-        <div class="col-lg-2">
-            @item.Vaga:    <br />
-            @contar
-            <div>
-                <a class="btn btn-info" href="DisciplinaPorCurso?id=@item.Codigo">Ver &raquo;</a>
-            </div>
-        </div>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Codigo)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Vaga)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantidade)
+            </td>
+        </tr>
     }
 
-</div>
+</table>

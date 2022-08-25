@@ -1,0 +1,38 @@
+﻿@model IEnumerable<FunilMVC.Models.VAGA>
+
+@{
+    ViewBag.Title = "Vaga";
+}
+
+<table class="table">
+    <tr>
+        <th scope="col">
+            Vaga
+        </th>
+
+        <th scope="col">
+            Salário
+        </th>
+
+        <th scope="col">
+            Opções
+        </th>
+    </tr>
+@foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VAINOME)
+                </td>
+
+                <td>
+                    R$@Html.DisplayFor(modelItem => item.VAISALARIO)
+                </td>
+
+                <td>
+                    <a class="btn btn-info" href="@Url.Action("DetailsLista", new { id = item.VAIID })">Detalhes</a> |
+                    <a class="btn btn-default" href="/Vaga/Inscricao/@item.VAIID">Se inscrever</a>
+                </td>
+            </tr>
+        }
+</table>

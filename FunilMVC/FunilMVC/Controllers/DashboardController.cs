@@ -15,7 +15,7 @@ namespace FunilMVC.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            return View(bd.GrupoCandidatoVaga.ToList().Count());
+            return View(bd.QuantidadeVaiid.ToList());
         }
     }
 }

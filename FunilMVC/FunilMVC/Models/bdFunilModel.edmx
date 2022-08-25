@@ -61,11 +61,15 @@ warning 6002: The table/view 'BDFunil.dbo.GrupoCandidatoVaga' does not have a pr
           <Property Name="Situacao" Type="varchar" MaxLength="20" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6013: The table/view 'BDFunil.dbo.QuantidadeVaiid' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+warning 6002: The table/view 'BDFunil.dbo.QuantidadeVaiid' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="QuantidadeVaiid">
+          <Key>
+            <PropertyRef Name="Codigo" />
+          </Key>
+          <Property Name="Codigo" Type="int" Nullable="false" />
           <Property Name="Vaga" Type="varchar" MaxLength="500" />
           <Property Name="Quantidade" Type="int" />
-        </EntityType>-->
+        </EntityType>
         <Association Name="FK__CANDIDATO__CANID__2E1BDC42">
           <End Role="CANDIDATO" Type="Self.CANDIDATO" Multiplicity="1" />
           <End Role="CANDIDATOVAGA" Type="Self.CANDIDATOVAGA" Multiplicity="*" />
@@ -104,6 +108,13 @@ warning 6013: The table/view 'BDFunil.dbo.QuantidadeVaiid' does not have a prima
 [GrupoCandidatoVaga].[DataDeCadastro] AS [DataDeCadastro], 
 [GrupoCandidatoVaga].[Situacao] AS [Situacao]
 FROM [dbo].[GrupoCandidatoVaga] AS [GrupoCandidatoVaga]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="QuantidadeVaiid" EntityType="Self.QuantidadeVaiid" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[QuantidadeVaiid].[Codigo] AS [Codigo], 
+[QuantidadeVaiid].[Vaga] AS [Vaga], 
+[QuantidadeVaiid].[Quantidade] AS [Quantidade]
+FROM [dbo].[QuantidadeVaiid] AS [QuantidadeVaiid]</DefiningQuery>
           </EntitySet>
           <AssociationSet Name="FK__CANDIDATO__CANID__2E1BDC42" Association="Self.FK__CANDIDATO__CANID__2E1BDC42">
             <End Role="CANDIDATO" EntitySet="CANDIDATO" />
@@ -198,6 +209,7 @@ FROM [dbo].[GrupoCandidatoVaga] AS [GrupoCandidatoVaga]</DefiningQuery>
             <End Role="CANDIDATOVAGA" EntitySet="CANDIDATOVAGA" />
           </AssociationSet>
           <EntitySet Name="GrupoCandidatoVaga" EntityType="BDFunilModel.GrupoCandidatoVaga" />
+          <EntitySet Name="QuantidadeVaiid" EntityType="BDFunilModel.QuantidadeVaiid" />
         </EntityContainer>
         <EntityType Name="GrupoCandidatoVaga">
           <Key>
@@ -213,6 +225,14 @@ FROM [dbo].[GrupoCandidatoVaga] AS [GrupoCandidatoVaga]</DefiningQuery>
           <Property Name="DataDeCadastro" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Situacao" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="CodigoV" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="QuantidadeVaiid">
+          <Key>
+            <PropertyRef Name="Codigo" />
+          </Key>
+          <Property Name="Codigo" Type="Int32" Nullable="false" />
+          <Property Name="Vaga" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Quantidade" Type="Int32" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -269,6 +289,15 @@ FROM [dbo].[GrupoCandidatoVaga] AS [GrupoCandidatoVaga]</DefiningQuery>
                 <ScalarProperty Name="DataDeCadastro" ColumnName="DataDeCadastro" />
                 <ScalarProperty Name="Vaga" ColumnName="Vaga" />
                 <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QuantidadeVaiid">
+            <EntityTypeMapping TypeName="BDFunilModel.QuantidadeVaiid">
+              <MappingFragment StoreEntitySet="QuantidadeVaiid">
+                <ScalarProperty Name="Quantidade" ColumnName="Quantidade" />
+                <ScalarProperty Name="Vaga" ColumnName="Vaga" />
                 <ScalarProperty Name="Codigo" ColumnName="Codigo" />
               </MappingFragment>
             </EntityTypeMapping>

@@ -155,10 +155,15 @@
     <Compile Include="Models\CANDIDATOVAGA.cs">
       <DependentUpon>bdFunilModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ChecarCandidatoVaga.cs" />
     <Compile Include="Models\ETAPA.cs">
       <DependentUpon>bdFunilModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\GrupoCandidatoVaga.cs">
+      <DependentUpon>bdFunilModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MensagemErro.cs" />
+    <Compile Include="Models\QuantidadeVaiid.cs">
       <DependentUpon>bdFunilModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\VAGA.cs">
@@ -238,6 +243,9 @@
     <Content Include="Views\Vaga\VagaCandidato.cshtml" />
     <Content Include="Views\Home\ErroNull.cshtml" />
     <Content Include="Views\Dashboard\Index.cshtml" />
+    <Content Include="Views\Vaga\Inscricao.cshtml" />
+    <Content Include="Views\Vaga\Listar.cshtml" />
+    <Content Include="Views\Vaga\DetailsLista.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

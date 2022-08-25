@@ -1,0 +1,63 @@
+﻿@model FunilMVC.Models.VAGA
+
+@{
+    ViewBag.Title = "Vaga";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Vaga
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VAINOME)
+        </dd>
+        <hr />
+        <dt>
+            Descrição
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VAIDESCRICAO)
+        </dd>
+        <hr />
+        <dt>
+            Atribuição
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VAIATRIBUICAO)
+        </dd>
+        <hr />
+        <dt>
+            Salário
+        </dt>
+
+        <dd>
+            R$@Html.DisplayFor(model => model.VAISALARIO)
+        </dd>
+        <hr />
+        <dt>
+            Requisito
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VAIREQUISITO)
+        </dd>
+        <hr />
+        <dt>
+            Data de cadastro
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VAIDATACADASTRO)
+        </dd>
+    </dl>
+</div>
+<p>
+    <a class="btn btn-primary" href="/Vaga/Listar">Voltar</a>
+</p>

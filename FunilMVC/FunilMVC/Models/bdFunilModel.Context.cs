@@ -30,5 +30,6 @@ namespace FunilMVC.Models
         public DbSet<ETAPA> ETAPA { get; set; }
         public DbSet<VAGA> VAGA { get; set; }
         public DbSet<GrupoCandidatoVaga> GrupoCandidatoVaga { get; set; }
+        public DbSet<QuantidadeVaiid> QuantidadeVaiid { get; set; }
     }
 }

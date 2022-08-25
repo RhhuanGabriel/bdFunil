@@ -138,5 +138,54 @@ namespace FunilMVC.Controllers
 
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public ActionResult Listar(int? id)
+        {
+            List<VAGA> Lista = bd.VAGA.ToList();
+            return View(Lista);
+        }
+
+        [HttpGet]
+        public ActionResult Inscricao(int? id)
+        {
+            var login = bd.CANDIDATO.FirstOrDefault(x => x.CANID == 4);
+
+            if (CandidatoValidations.CandidatoVagaValidarConcorrencia(login))
+            {
+                var vaga = bd.VAGA.Where(x => x.VAIID == id).FirstOrDefault();
+
+                CANDIDATOVAGA insc = new CANDIDATOVAGA();
+                insc.CANID = login.CANID;
+                insc.VAIID = vaga.VAIID;
+                insc.CAVDATACADASTRO = DateTime.Now;
+                insc.CAVSTATUSCANDIDATURA = "Ativo";
+
+                bd.CANDIDATOVAGA.Add(insc);
+                bd.SaveChanges();
+            }
+            else
+            {
+                MensagemErro.textoErro = "Já tem um cadastro ativo nessa vaga";
+                return RedirectToAction("Erro", "Home");
+            }
+
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult DetailsLista(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            VAGA vagas = bd.VAGA.Find(id);
+            if (vagas == null)
+            {
+                return HttpNotFound();
+            }
+            return View(vagas);
+        }
     }
 }

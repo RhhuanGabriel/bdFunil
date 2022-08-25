@@ -80,6 +80,7 @@
       <End Role="CANDIDATOVAGA" EntitySet="CANDIDATOVAGA" />
     </AssociationSet>
     <EntitySet Name="GrupoCandidatoVaga" EntityType="BDFunilModel.GrupoCandidatoVaga" />
+    <EntitySet Name="QuantidadeVaiid" EntityType="BDFunilModel.QuantidadeVaiid" />
   </EntityContainer>
   <EntityType Name="GrupoCandidatoVaga">
     <Key>
@@ -95,5 +96,13 @@
     <Property Name="DataDeCadastro" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="Situacao" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="CodigoV" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="QuantidadeVaiid">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="Int32" Nullable="false" />
+    <Property Name="Vaga" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Quantidade" Type="Int32" />
   </EntityType>
 </Schema>

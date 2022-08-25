@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.2.32630.192
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32802.440
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunilMVC", "FunilMVC\FunilMVC.csproj", "{8BB79E47-CB0F-4C6F-9CBC-0B4425972F07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFunilMVC", "TestFunilMVC\TestFunilMVC.csproj", "{6AB2ED1A-BBF5-48C3-BF1F-B8BDBFCBB1DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{8BB79E47-CB0F-4C6F-9CBC-0B4425972F07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BB79E47-CB0F-4C6F-9CBC-0B4425972F07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BB79E47-CB0F-4C6F-9CBC-0B4425972F07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AB2ED1A-BBF5-48C3-BF1F-B8BDBFCBB1DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AB2ED1A-BBF5-48C3-BF1F-B8BDBFCBB1DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AB2ED1A-BBF5-48C3-BF1F-B8BDBFCBB1DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AB2ED1A-BBF5-48C3-BF1F-B8BDBFCBB1DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
